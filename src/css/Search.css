@@ -1,0 +1,22 @@
+.search-bar {
+  background-image: url("../trip.jpg");
+  width: 100%;
+  height: 28vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+}
+.search-bar select {
+  width: 30%;
+  margin: 5px;
+  /* display: inline; */
+}
+
+.search-bar h1 {
+  background-color: #00000024;
+  text-shadow: 2px 2px 4px #706060;
+}
