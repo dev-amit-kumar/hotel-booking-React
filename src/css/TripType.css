@@ -17,3 +17,9 @@
   padding: 4px 30px;
   float: right;
 }
+
+@media only screen and (max-width: 600px) {
+  .tripType h1 {
+    font-size: 30px;
+  }
+}
