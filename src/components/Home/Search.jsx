@@ -21,7 +21,7 @@ class Search extends React.Component{
 
     cityChangeHandler = (e) => {
         if(e.target.value){
-            this.props.history.push(`/list_by_city/${e.target.value}`)
+            this.props.history.push(`/list/hotels?city=${e.target.value}`)
         }
     }
 

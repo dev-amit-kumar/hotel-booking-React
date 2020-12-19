@@ -33,7 +33,7 @@ class TripType extends React.Component {
                                         <img src={trip.image} className="card-img-top" alt={trip.name}/>
                                         <div className="card-body">
                                             <h5 className="card-title text-center">{trip.name} Trip</h5>
-                                            <Link to={`/list_by_trip/${trip.trip}`} className="btn btn-dark shadow-sm">Let's Go</Link>
+                                            <Link to={`/list/hotellist+${trip.trip}`} className="btn btn-dark shadow-sm">Let's Go</Link>
                                         </div>
                                     </div>
                                 </div>
