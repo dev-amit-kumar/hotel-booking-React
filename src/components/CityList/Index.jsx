@@ -1,7 +1,7 @@
 import React from 'react'
 import HotelDisplay from '../HotelDisplay'
 import '../../css/TripList.css'
-const UrlTrip = 'https://developerfunnel.herokuapp.com/hotellist/'
+const UrlHotelByCity = 'https://developerfunnel.herokuapp.com/hotels?city='
 
 class Index extends React.Component{
     constructor(){
@@ -32,7 +32,7 @@ class Index extends React.Component{
 
     componentDidMount(){
         const tripId = this.props.match.params.id
-        fetch(`${UrlTrip}${tripId}`,{method: 'GET'})
+        fetch(`${UrlHotelByCity}${tripId}`,{method: 'GET'})
         .then((res) => res.json())
         .then((data) => {
             this.setState({hotel_list: data})

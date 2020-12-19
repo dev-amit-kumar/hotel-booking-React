@@ -3,6 +3,7 @@ import Navbar from './Navbar'
 import Footer from './Footer'
 import Home from './Home/Index'
 import TripList from './TripList/Index'
+import CityList from './CityList/Index'
 
 const Routing = () => {
     return(
@@ -10,7 +11,7 @@ const Routing = () => {
             <Navbar/>
             <Route path="/" exact component={Home} />
             <Route path="/list_by_trip/:id" component={TripList} />
-            <Route path="/list_by_city/:id" component={TripList} />
+            <Route path="/list_by_city/:id" component={CityList} />
             <Footer/>
         </BrowserRouter>
     )
