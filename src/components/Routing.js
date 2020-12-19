@@ -2,7 +2,7 @@ import {BrowserRouter, Route} from 'react-router-dom'
 import Navbar from './Navbar'
 import Footer from './Footer'
 import Home from './Home/Index'
-import HotelList from './HotelList'
+import HotelList from './Hotel/HotelList'
 
 const Routing = () => {
     return(

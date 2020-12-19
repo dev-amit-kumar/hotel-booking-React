@@ -30,11 +30,12 @@ class TripType extends React.Component {
                             return (
                                 <div className="col-12 col-md-3 mb-2" key={idx}>
                                     <div className="card shadow-lg">
-                                        <img src={trip.image} className="card-img-top" alt={trip.name}/>
-                                        <div className="card-body">
-                                            <h5 className="card-title text-center">{trip.name} Trip</h5>
-                                            <Link to={`/list/hotellist+${trip.trip}`} className="btn btn-dark shadow-sm">Let's Go</Link>
-                                        </div>
+                                        <Link to={`/list/hotellist+${trip.trip}`}>
+                                            <img src={trip.image} className="card-img-top" alt={trip.name}/>
+                                            <div className="card-body">
+                                                <h4 className="text-center text-dark">{trip.name} Trip</h4>
+                                            </div>
+                                        </Link>
                                     </div>
                                 </div>
                             )

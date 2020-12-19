@@ -1,6 +1,5 @@
 import React from 'react'
 import HotelDisplay from './HotelDisplay'
-import '../css/TripList.css'
 const UrlTrip = 'https://developerfunnel.herokuapp.com/'
 
 class HotelList extends React.Component{
