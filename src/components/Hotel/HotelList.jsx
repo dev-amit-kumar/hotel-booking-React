@@ -30,7 +30,10 @@ class HotelList extends React.Component{
     }
 
     componentDidMount(){
-        const tripId = this.props.match.params.id
+        var tripId = this.props.match.params.id
+        if (tripId === 'hotels'){
+            tripId = tripId + this.props.location.search
+        }
         fetch(`${UrlTrip}${tripId.replace('+','/')}`,{method: 'GET'})
         .then((res) => res.json())
         .then((data) => {
