@@ -29,7 +29,7 @@ class Search extends React.Component{
         return(
             <>
                 <div className="search-bar">
-                    <h1 className="text-white shadow-lg">Find hotels as per your city</h1>
+                    <h1 className="text-white shadow-lg">Search with us</h1>
                     <select className="form-control shadow-lg mt-3" onChange={this.cityChangeHandler}>
                         <option value="">Select City</option>
                         {

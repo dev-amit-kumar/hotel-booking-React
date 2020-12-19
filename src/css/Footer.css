@@ -2,6 +2,7 @@ footer {
   display: flex;
   margin-top: 10px;
   justify-content: space-evenly;
+  margin-bottom: 10px;
 }
 footer span {
   border-radius: 5px;

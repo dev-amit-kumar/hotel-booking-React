@@ -23,7 +23,7 @@ class TripType extends React.Component {
     render(){
         return(
             <div className="container-fluid tripType">
-                <h1 className="text-center">Plan your trip by type</h1>
+                <h2><i className="fa fa-chevron-right" aria-hidden="true"></i>Plan your trip by type</h2>
                 <div className="row">
                     {
                         this.state.tripTypeData && this.state.tripTypeData.map((trip,idx) => {
@@ -33,7 +33,7 @@ class TripType extends React.Component {
                                         <img src={trip.image} className="card-img-top" alt={trip.name}/>
                                         <div className="card-body">
                                             <h5 className="card-title text-center">{trip.name} Trip</h5>
-                                            <Link to={`/list/${trip.trip}`} className="btn btn-dark shadow-sm">Let's Go</Link>
+                                            <Link to={`/list_by_trip/${trip.trip}`} className="btn btn-dark shadow-sm">Let's Go</Link>
                                         </div>
                                     </div>
                                 </div>
