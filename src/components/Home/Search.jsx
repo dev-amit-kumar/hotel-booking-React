@@ -33,8 +33,8 @@ class Search extends React.Component{
                     <select className="form-control shadow-lg mt-3" onChange={this.cityChangeHandler}>
                         <option value="">Select City</option>
                         {
-                            this.state.allCity && this.state.allCity.map((city, idx) => {
-                                return(<option value={city._id} key={idx}>{city.city_name}</option>)
+                            this.state.allCity && this.state.allCity.map((city, index) => {
+                                return(<option value={city._id} key={index}>{city.city_name}</option>)
                             })
                         }
                     </select>
