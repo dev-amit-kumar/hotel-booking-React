@@ -15,7 +15,7 @@ class HotelList extends React.Component{
             <div className="container-fluid">
                 <div className="row">
                     <div className="col-2">
-                        Sort
+                        Sorting and filter to be added soon
                     </div>
                     <div className="col-10">
                         <div className="row">
