@@ -1,0 +1,11 @@
+.hotel_detail img {
+  width: 100%;
+  height: 60vh;
+}
+
+.hotel_detail {
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+  /* height: 80vh; */
+}
