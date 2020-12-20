@@ -2,12 +2,10 @@ import { Link } from 'react-router-dom'
 import '../../css/HotelDisplay.css'
 
 const HotelDisplay = (props) =>{
-    const id = props.hotel_data._id
-    console.log(id)
     return(
         <div className="col-md-3 mb-4">
             <div className="hotel_data card">
-                <Link to={`/hotel/${id}`}>
+                <Link to={`/hotel/${props.hotel_data._id}`}>
                     <img src={props.hotel_data.thumb} alt={props.hotel_data.name} />
                     <div className="card-body">
                         <h6 className="text-center text-dark"><strong>{props.hotel_data.name}</strong></h6>
