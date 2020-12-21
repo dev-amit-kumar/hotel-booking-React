@@ -10,8 +10,9 @@ class HotelDetail extends React.Component {
     }
 
     render(){
-        return(
-            <div className="hotel_detail container-fluid mt-4">
+        if(this.state.hotel_data){
+            return(
+                <div className="hotel_detail container-fluid mt-4">
                     <h1 className="ml-4">Hotel Details</h1>
                     <div className="row">
                         <div className="col-md-6">
@@ -23,7 +24,7 @@ class HotelDetail extends React.Component {
                                 <p><strong>Address: </strong>{this.state.hotel_data.address}</p>
                                 <p><strong>Location: </strong>{this.state.hotel_data.locality}</p>
                                 <p><strong>City: </strong>{this.state.hotel_data.city_name}</p>
-                                <p><strong>Cost: </strong>{this.state.hotel_data.cost}</p>
+                                <p><strong>Cost: &#8377;</strong>{this.state.hotel_data.cost}</p>
                             </div>
                             <hr/>
                             <form className="p-4">
@@ -41,7 +42,7 @@ class HotelDetail extends React.Component {
                                 <div className="form-group row">
                                     <label className="col-sm-2 col-form-label">Room type: </label>
                                     <div className="col-sm-9">
-                                        {this.state.hotel_data && this.state.hotel_data.type.map((data, index) => {
+                                        {this.state.hotel_data.type.map((data, index) => {
                                             return (<button key={index} className="btn btn-light btn-outline-info m-1" id={data.roomtype}>{data.name}</button>)
                                         })}
                                     </div>
@@ -51,7 +52,17 @@ class HotelDetail extends React.Component {
                         </div>
                     </div>
                 </div>
-        )
+            )
+        }
+        else{
+            return (
+                <div className="full-cover">
+                    <div className="spinner-border" style={{width: '3rem', height: '3rem'}} role="status">
+                    <span className="sr-only">Loading...</span>
+                    </div>
+                </div>
+            )
+        }   
     }
     
     componentDidMount(){
@@ -61,7 +72,5 @@ class HotelDetail extends React.Component {
             hotel_data: data[0]
         }))
     }
-    
-    
 }
 export default HotelDetail

@@ -1,47 +1,30 @@
 import React from 'react'
 import '../../css/Search.css'
 import {withRouter} from 'react-router-dom'
-const cityUrl = 'https://developerfunnel.herokuapp.com/location'
-class Search extends React.Component{
-    constructor(props){
-        super(props)
-        this.state = {
-            allCity: '',
-            allHotel: ''
-        }
-    }
 
-    componentDidMount(){
-        fetch(cityUrl,{method: 'GET'})
-        .then((response) => response.json())
-        .then((city) => {
-            this.setState({allCity: city})
-        })
-    }
+const Search = (props) =>{
 
-    cityChangeHandler = (e) => {
+    const cityChangeHandler = (e) => {
         if(e.target.value){
-            this.props.history.push(`/list/hotels?city=${e.target.value}`)
+            props.history.push(`/list/hotels?city=${e.target.value}`)
         }
     }
 
-    render(){
-        return(
-            <>
-                <div className="search-bar">
-                    <h1 className="text-white shadow-lg">Search with us</h1>
-                    <select className="form-control shadow-lg mt-3" onChange={this.cityChangeHandler}>
-                        <option value="">Select City</option>
-                        {
-                            this.state.allCity && this.state.allCity.map((city, index) => {
-                                return(<option value={city._id} key={index}>{city.city_name}</option>)
-                            })
-                        }
-                    </select>
-                </div>
-            </>
-        )
-    }
+    return(
+        <>
+            <div className="search-bar">
+                <h1 className="text-white shadow-lg">Search with us</h1>
+                <select className="form-control shadow-lg mt-3" onChange={cityChangeHandler}>
+                    <option value="">Select City</option>
+                    {
+                        props.allCity && props.allCity.map((city, index) => {
+                            return(<option value={city._id} key={index}>{city.city_name}</option>)
+                        })
+                    }
+                </select>
+            </div>
+        </>
+    )
 }
 
 export default withRouter(Search)

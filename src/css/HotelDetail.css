@@ -9,3 +9,10 @@
   align-items: center; */
   /* height: 80vh; */
 }
+
+.full-cover {
+  height: 85vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
