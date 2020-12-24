@@ -2,5 +2,17 @@
   display: block;
 }
 .filterDiv {
-  margin-top: 20px;
+  margin-top: 10px;
+  color: grey;
+}
+.filterDiv button {
+  color: #007bff;
+}
+
+.filter {
+  padding-left: 20px;
+}
+
+.all_filter {
+  height: 100%;
 }

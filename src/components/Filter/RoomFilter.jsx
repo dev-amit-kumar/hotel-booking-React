@@ -8,8 +8,10 @@ const RoomFilter = (props) => {
 
     return(
         <div className="filterDiv">
-            <h6><b>Room Filter</b></h6>
-            <div className="filter" onChange={filterLogic}>
+            <button className="btn" type="button" data-toggle="collapse" data-target="#collapseRoom" aria-expanded="false" aria-controls="collapseRoom">
+                <h6><b>Room Filter <i className="fa fa-angle-right" aria-hidden="true"></i></b></h6>
+            </button>
+            <div className="filter collapse" onChange={filterLogic} id="collapseRoom">
                 <label className="radio">
                     <input type="radio" value="" name="room"/>All
                 </label>

@@ -27,8 +27,10 @@ class CityFilter extends Component{
     render(){
         return(
             <div className="filterDiv">
-                <h6><b>City Filter</b></h6>
-                <div className="filter" onChange={this.filterLogic}>
+                <button className="btn" type="button" data-toggle="collapse" data-target="#collapseCity" aria-expanded="false" aria-controls="collapseCity">
+                    <h6><b>City Filter <i className="fa fa-angle-right" aria-hidden="true"></i></b></h6>
+                </button>
+                <div className="filter collapse" onChange={this.filterLogic} id="collapseCity">
                     <label className="radio">
                         <input type="radio" value="" name="city"/>All
                     </label>

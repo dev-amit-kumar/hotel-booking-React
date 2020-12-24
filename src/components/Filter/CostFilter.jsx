@@ -6,8 +6,10 @@ const CostFilter = (props) =>{
     }
     return(
         <div className="filterDiv">
-            <h6><b>Cost Filter</b></h6>
-            <div className="filter" onChange={filterLogic}>
+            <button className="btn" type="button" data-toggle="collapse" data-target="#collapseCost" aria-expanded="false" aria-controls="collapseCost">
+                <h6><b>Cost Filter <i className="fa fa-angle-right" aria-hidden="true"></i></b></h6>
+            </button>
+            <div className="filter collapse" onChange={filterLogic} id="collapseCost">
                 <label className="radio">
                     <input type="radio" value="" name="cost" />All
                 </label>
