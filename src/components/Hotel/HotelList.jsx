@@ -1,5 +1,9 @@
 import React from 'react'
 import HotelDisplay from './HotelDisplay'
+import RoomFilter from '../Filter/RoomFilter'
+import CostFilter from '../Filter/CostFilter'
+import CityFilter from '../Filter/CityFilter'
+
 const UrlTrip = 'https://developerfunnel.herokuapp.com/'
 
 class HotelList extends React.Component{
@@ -10,13 +14,25 @@ class HotelList extends React.Component{
         }
     }
 
+    setRoomType(filterRoom){
+        this.setState({hotel_list:filterRoom})
+    }
+    setCost(filterCost){
+        this.setState({hotel_list:filterCost})
+    }
+
     render(){
             if(this.state.hotel_list){
                 return(
                     <div className="container-fluid">
                         <div className="row">
                             <div className="col-2">
-                                Sorting and filter to be added soon
+                                <p>Filter</p>
+                                <RoomFilter RoomType={(data) => {this.setRoomType(data)}}/>
+                                <br/>
+                                <CostFilter costType={(data) => {this.setCost(data)}}/>
+                                <br/>
+                                <CityFilter/>
                             </div>
                             <div className="col-10">
                                 <div className="row">
