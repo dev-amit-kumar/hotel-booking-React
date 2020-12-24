@@ -5,7 +5,7 @@ const Navbar = () => {
         <nav className="navbar">
             <Link to="/" className="navbar-brand">Trip-Go</Link>
             <form className="form-inline">
-                <Link to='/booking' className="btn btn-dark my-2 my-sm-0 shadow-lg" type="submit">Booking</Link>
+                <label className="btn btn-dark my-2 my-sm-0 shadow-lg">Plan your trip with us</label>
             </form>
         </nav>
     )
