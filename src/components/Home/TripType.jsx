@@ -12,7 +12,7 @@ const TripType = (props) => {
                         return (
                             <div className="col-12 col-md-3 mb-2" key={idx}>
                                 <div className="card shadow-lg">
-                                    <Link to={`/list/hotellist+${trip.trip}`}>
+                                    <Link to={`/hotellist/${trip.trip}`}>
                                         <img src={trip.image} className="card-img-top" alt={trip.name}/>
                                         <div className="card-body">
                                             <h4 className="text-center text-dark">{trip.name} Trip</h4>

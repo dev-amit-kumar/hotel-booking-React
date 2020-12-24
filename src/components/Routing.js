@@ -10,7 +10,7 @@ const Routing = () => {
         <BrowserRouter>
             <Navbar/>
             <Route path="/" exact component={Home} />
-            <Route path="/list/:id" component={HotelList} />
+            <Route path="/hotellist/:id" component={HotelList} />
             <Route path="/hotel/:id" component={HotelDetail} />
             <Footer/>
         </BrowserRouter>

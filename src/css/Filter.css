@@ -1,3 +1,6 @@
 .filter label {
   display: block;
 }
+.filterDiv {
+  margin-top: 20px;
+}
