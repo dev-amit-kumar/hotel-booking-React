@@ -58,20 +58,33 @@ class HotelList extends React.Component{
             return(
                 <div className="container-fluid">
                     <div className="row">
-                        <div className="col-2 all_filter">
-                            <div className="card">
-                                <h4 className="text-center">Filter</h4>
-                                <RoomFilter RoomType={(data) => {this.setRoomType(data)}}/>
-                                <CostFilter costType={(data) => {this.setCost(data)}}/>
-                                <CityFilter cityFilter={(data) => {this.setCity(data)}}/>
-                            </div>
-                            <br/>
-                            <div className="card">
-                                <h4 className="text-center">Sort</h4>
-                                <CostSort all_hotel={(data) => {this.setCostSort(data)}} hotel_list={this.state.hotel_list}/>
+                        <div className="col-12 col-md-2 all_filter">
+                            <div className="row">
+                                <div className="col-6 col-md-12 mb-4">
+                                    <div className="card">
+                                        <button className="btn" type="button" data-toggle="collapse" data-target="#collapseAllFilter" aria-expanded="false" aria-controls="collapseAllFilter">
+                                            <h5 className="text-center">Filter <i className="fa fa-filter" aria-hidden="true"></i></h5>
+                                        </button>
+                                        <div className="filter collapse" onChange={this.filterLogic} id="collapseAllFilter">
+                                            <RoomFilter RoomType={(data) => {this.setRoomType(data)}}/>
+                                            <CostFilter costType={(data) => {this.setCost(data)}}/>
+                                            <CityFilter cityFilter={(data) => {this.setCity(data)}}/>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="col-6 col-md-12 mb-4">
+                                    <div className="card">
+                                        <button className="btn" type="button" data-toggle="collapse" data-target="#collapseAllSort" aria-expanded="false" aria-controls="collapseAllSort">
+                                            <h5 className="text-center">Sort <i className="fa fa-sort" aria-hidden="true"></i></h5>
+                                        </button>
+                                        <div className="filter collapse" onChange={this.filterLogic} id="collapseAllSort">
+                                            <CostSort all_hotel={(data) => {this.setCostSort(data)}} hotel_list={this.state.hotel_list}/>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div className="col-10">
+                        <div className="col-12 col-md-10">
                             <div className="row">
                                 {inner_data}
                             </div>

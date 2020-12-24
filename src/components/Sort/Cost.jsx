@@ -14,7 +14,7 @@ const CostSort = (props) =>{
     return(
         <div className="filterDiv">
             <button className="btn" type="button" data-toggle="collapse" data-target="#collapseCostSort" aria-expanded="false" aria-controls="collapseCostSort">
-                <h6><b>Sort Cost <i className="fa fa-angle-right" aria-hidden="true"></i></b></h6>
+                <h6><b>Cost <i className="fa fa-angle-right" aria-hidden="true"></i></b></h6>
             </button>
             <div className="filter collapse" onChange={sortLogic} id="collapseCostSort">
                 <label className="radio">
