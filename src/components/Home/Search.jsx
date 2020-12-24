@@ -6,7 +6,7 @@ const Search = (props) =>{
 
     const cityChangeHandler = (e) => {
         if(e.target.value){
-            props.history.push(`/list/hotels?city=${e.target.value}`)
+            props.history.push(`/hotellist/city=${e.target.value}`)
         }
     }
 

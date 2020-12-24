@@ -112,6 +112,7 @@ class HotelList extends React.Component{
 
     componentDidMount(){
         var tripId = this.props.match.params.id
+        console.log(tripId)
         var url = `${UrlTrip}/${tripId}`
         fetch(url,{method: 'GET'})
         .then((res) => res.json())
