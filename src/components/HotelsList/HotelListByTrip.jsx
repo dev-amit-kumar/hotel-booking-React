@@ -14,7 +14,8 @@ class HotelList extends React.Component{
             hotel_list: '',
             costRange: '',
             roomType: '',
-            cityId:''
+            cityId:'',
+            costSortType: 'low_high'
         }
     }
 
@@ -32,8 +33,8 @@ class HotelList extends React.Component{
         this.setState({cityId:filterCity})
     }
 
-    setCostSort(sortedCost){
-        this.setState({hotel_list:sortedCost})
+    setCostSort(sortedCost, filterType){
+        this.setState({hotel_list:sortedCost, costSortType: filterType})
     }
 
     render(){
@@ -68,7 +69,7 @@ class HotelList extends React.Component{
                                         <div className="filter collapse" onChange={this.filterLogic} id="collapseAllFilter">
                                             <RoomFilter RoomType={(data) => {this.setRoomType(data)}}/>
                                             <CostFilter costType={(data) => {this.setCost(data)}}/>
-                                            <CityFilter cityFilter={(data) => {this.setCity(data)}}/>
+                                            <CityFilter cityFilter={(data) => {this.setCity(data)}}  />
                                         </div>
                                     </div>
                                 </div>
@@ -78,7 +79,7 @@ class HotelList extends React.Component{
                                             <h5 className="text-center">Sort <i className="fa fa-sort" aria-hidden="true"></i></h5>
                                         </button>
                                         <div className="filter collapse" onChange={this.filterLogic} id="collapseAllSort">
-                                            <CostSort all_hotel={(data) => {this.setCostSort(data)}} hotel_list={this.state.hotel_list}/>
+                                            <CostSort all_hotel={(data,type) => {this.setCostSort(data,type)}} hotel_list={this.state.hotel_list} costSortType={this.state.costSortType}/>
                                         </div>
                                     </div>
                                 </div>

@@ -1,15 +1,14 @@
 import '../../css/Filter.css'
-var sortJsonArray = require('sort-json-array');
 const CostSort = (props) =>{
     const sortLogic = (event) => {
         let cost = event.target.value;
-        if(cost === 'high_low'){
-            sortJsonArray(props.hotel_list,'cost','des')
+        if(cost === 'high_low' && props.costSortType != 'high_low'){
+            props.hotel_list.reverse()
         }
-        else if(cost === 'low_high'){
-            sortJsonArray(props.hotel_list,'cost','asc')
+        else if(cost === 'low_high' && props.costSortType != 'low_high'){
+            props.hotel_list.reverse()
         }
-        props.all_hotel(props.hotel_list)
+        props.all_hotel(props.hotel_list, cost)
     }
     return(
         <div className="filterDiv">
