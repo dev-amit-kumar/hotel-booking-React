@@ -2,10 +2,10 @@ import '../../css/Filter.css'
 const CostSort = (props) =>{
     const sortLogic = (event) => {
         let cost = event.target.value;
-        if(cost === 'high_low' && props.costSortType != 'high_low'){
+        if(cost === 'high_low' && props.costSortType !== 'high_low'){
             props.hotel_list.reverse()
         }
-        else if(cost === 'low_high' && props.costSortType != 'low_high'){
+        else if(cost === 'low_high' && props.costSortType !== 'low_high'){
             props.hotel_list.reverse()
         }
         props.all_hotel(props.hotel_list, cost)
